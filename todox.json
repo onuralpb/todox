@@ -1,0 +1,29 @@
+{
+  "todox": [
+    {
+      "name": "Clean up breakfast dishes",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "name": "Sweep kitchen floor",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "name": "Place online orders",
+      "completed": true,
+      "id": 3
+    },
+    {
+      "name": "Make bed",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "name": "Place online orders",
+      "completed": false,
+      "id": 5
+    }
+  ]
+}
