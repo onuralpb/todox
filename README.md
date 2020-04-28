@@ -1,4 +1,4 @@
-# Todox - Javascript TodoList with webpack and ES6 modules
+# todox - Javascript TodoList
 
 the following technologies were used:
 
