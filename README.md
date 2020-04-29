@@ -1,9 +1,13 @@
-# Todox - Javascript TodoList with webpack and ES6 modules
+# todox - Javascript TodoList
 
 the following technologies were used:
 
-- Bootstrap 4
-- Webpack 4
+- Webpack 4 (A bundler for javascript and friends)
+- Bootstrap 4 (World’s most popular front-end component library)
+- JSON Server (Full fake REST API)
+- Animate.css (A cross-browser library of CSS animations)
+- Loaders.css (Delightful and performance-focused pure css loading animations)
+- Fontawesome 5 (The world's most popular and easiest to use icon set)
 
 ## License
 
