@@ -7,22 +7,22 @@
     },
     {
       "name": "Sweep kitchen floor",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
       "name": "Place online orders",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
       "name": "Make bed",
-      "completed": true,
+      "completed": false,
       "id": 4
     },
     {
       "name": "Place online orders",
-      "completed": false,
+      "completed": true,
       "id": 5
     }
   ]
