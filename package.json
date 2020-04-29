@@ -8,7 +8,7 @@
     "report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
     "jserver": "json-server --watch todox.json --port 5555",
     "start": "concurrently \"npm:watch\" \"npm:jserver\" \"npm:serve\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm insall --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "license": "MIT",
   "dependencies": {
