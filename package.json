@@ -6,7 +6,7 @@
     "watch": "webpack -d --watch",
     "serve": "webpack-dev-server -d",
     "report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
-    "jserver": "json-server --watch todox.json --port 5555",
+    "jserver": "json-server --watch todox.json",
     "start": "concurrently \"npm:watch\" \"npm:jserver\" \"npm:serve\""
   },
   "license": "MIT",
