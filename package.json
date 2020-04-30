@@ -6,7 +6,7 @@
     "watch": "webpack -d --watch",
     "serve": "webpack-dev-server -d",
     "report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
-    "jserver": "json-server --watch todox.json --port 4000",
+    "jserver": "json-server --watch todox.json --port 5555",
     "start": "concurrently \"npm:watch\" \"npm:jserver\" \"npm:serve\""
   },
   "license": "MIT",
@@ -20,7 +20,9 @@
     "bootstrap": "4.4.1",
     "loaders.css": "^0.1.2",
     "webpack": "^4.42.1",
-    "concurrently": "5.1.0",
+    "concurrently": "5.1.0"
+  },
+  "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/runtime": "^7.9.2",
     "babel-loader": "8.1.0",
