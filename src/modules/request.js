@@ -2,7 +2,7 @@ import { loader } from "./loader";
 
 export class Request {
   constructor() {
-    this.url = "http://localhost:5555/todox";
+    this.url = "http://localhost:4000/todox";
     this.taskList = document.querySelector(".taskList");
   }
   get() {
