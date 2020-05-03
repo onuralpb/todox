@@ -1,4 +1,4 @@
 /node_modules
 .DS_Store
 /dist
-/src/modules/databaseConfig.firebase.js
+src/modules/databaseConfig.firebase.js
