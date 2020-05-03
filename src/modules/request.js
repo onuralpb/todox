@@ -7,16 +7,19 @@ export class Request {
   }
   get() {
     return new Promise((resolve, reject) => {
+      loader(true, this.taskList);
       fetch(this.url)
         .then(response => response.json())
         .then(json => {
-          loader(true, this.taskList);
           setTimeout(() => {
             resolve(json);
             loader(false);
           }, 1000);
         })
-        .catch(err => reject(err));
+        .catch(err => {
+          reject(err);
+          loader(false);
+        });
     });
   }
 

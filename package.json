@@ -1,15 +1,19 @@
 {
   "name": "todox",
-  "version": "0.1.0",
-  "description": "Pure Javascript Todolist with webpack and ES6+",
+  "version": "0.2.0",
+  "description": "Pure Javascript Todolist with webpack 4, bootstrap 4, firebase and ES6+",
+  "author": "Onur Alp Baklaci",
+  "homepage": "https://github.com/onuralpb/todox",
   "scripts": {
-    "watch": "webpack -d --watch",
-    "serve": "webpack-dev-server -d",
     "report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
     "jserver": "json-server --watch todox.json --port 5555",
-    "start": "concurrently \"npm:watch\" \"npm:jserver\" \"npm:serve\""
+    "build:dev": "webpack -d --config webpack.dev.config.js",
+    "build:prod": "webpack -p --config webpack.prod.config.js",
+    "serve:dev": "webpack-dev-server -d --config webpack.dev.config.js",
+    "serve:prod": "webpack-dev-server -p --config webpack.prod.config.js",
+    "start:dev": "concurrently \"npm:jserver\" \"npm:serve:dev\"",
+    "start:prod": "concurrently  \"npm:serve:prod\""
   },
-  "license": "MIT",
   "dependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
@@ -18,9 +22,10 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "animate.css": "^3.7.2",
     "bootstrap": "4.4.1",
+    "concurrently": "5.1.0",
+    "firebase": "^7.14.2",
     "loaders.css": "^0.1.2",
-    "webpack": "^4.42.1",
-    "concurrently": "5.1.0"
+    "webpack": "^4.42.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0",
@@ -43,9 +48,33 @@
     "style-loader": "1.1.4",
     "webpack-bundle-analyzer": "^3.7.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   },
   "prettier": {
     "arrowParens": "avoid"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git@github.com:onuralpb/todox.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "todox",
+    "css-animations",
+    "javascript-todolist",
+    "bootstrap4",
+    "scss",
+    "firebase-realtime-database",
+    "firebase",
+    "es6",
+    "json-server",
+    "webpack4",
+    "loaders",
+    "webpack-dev-server",
+    "javascript",
+    "fontawesome5",
+    "animatecss",
+    "css"
+  ]
 }

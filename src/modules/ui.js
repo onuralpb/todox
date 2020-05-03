@@ -6,7 +6,6 @@ export class UI {
       totalTask: 0,
       completedTask: 0,
     };
-    console.log(this.state);
     this.taskList = document.querySelector(".taskList");
     this.createdTaskCount = document.querySelector(".createdTaskCount");
     this.completedTaskCount = document.querySelector(".completedTaskCount");

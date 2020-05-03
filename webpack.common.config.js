@@ -1,21 +1,11 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 // const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
-  // mode: "development",
-  entry: path.resolve(__dirname, "src/app.js"),
-  output: {
-    filename: "[name].js",
-    chunkFilename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
-    // hotUpdateChunkFilename: "hot/hot-update.js",
-    // hotUpdateMainFilename: "hot/hot-update.json",
-  },
   stats: {
     colors: true,
   },
@@ -47,9 +37,6 @@ module.exports = {
               reloadAll: true,
             },
           },
-          // {
-          //     loader: "style-loader",
-          // },
           {
             loader: "css-loader",
             options: {
@@ -107,31 +94,26 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
     publicPath: "/",
-    port: 3100,
     open: true,
     hot: true,
     inline: true,
     historyApiFallback: true,
     watchContentBase: true,
-    // host: "192.168.0.16",
-    // disableHostCheck: true,
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, "index.html"),
       filename: "index.html",
       favicon: "favicon.ico",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: "[name].bundle..css",
+      chunkFilename: "[id].bundle.css",
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: "disabled",
-      generateStatsFile: true,
+      generateStatsFile: false,
       statsOptions: { source: false },
     }),
     // new BrowserSyncPlugin({

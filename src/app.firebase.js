@@ -1,6 +1,6 @@
 import "./modules/libs";
 import { addAnimate } from "./modules/animate";
-import { Request } from "./modules/request";
+import { Request } from "./modules/request.firebase";
 import { UI } from "./modules/ui";
 
 const inputTask = document.getElementById("input-task");
@@ -31,14 +31,14 @@ function addTask(e) {
   const inputValue = inputTask.value.trim();
   if (inputValue) {
     const newTaskData = {
-      completed: false,
       name: inputTask.value.trim(),
+      completed: false,
     };
     request
       .post(newTaskData)
-      .then(response => {
+      .then(() => {
         ui.state.totalTask++;
-        ui.addNewTaskToPage(response);
+        ui.addNewTaskToPage(newTaskData);
         ui.clearInput(inputTask);
       })
       .then(() => {
@@ -73,7 +73,7 @@ function valueControl(e) {
 function checkboxControlAfterAddTask(checkedButton) {
   checkedButton.addEventListener("change", e => {
     const updateInfo = {
-      id: parseInt(e.target.id),
+      id: e.target.id,
       name: e.target.nextElementSibling.textContent,
     };
     changeTaskStatus(e, updateInfo);
@@ -86,7 +86,7 @@ function checkboxControl() {
   inputCheckbox.forEach(check => {
     check.addEventListener("change", e => {
       const updateInfo = {
-        id: parseInt(e.target.id),
+        id: e.target.id,
         name: e.target.nextElementSibling.textContent,
       };
       changeTaskStatus(e, updateInfo);
