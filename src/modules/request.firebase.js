@@ -5,6 +5,7 @@ import { loader } from "./loader";
 export class Request {
   constructor() {
     firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
     this.ref = firebase.database().ref("/todox");
     this.taskList = document.querySelector(".taskList");
     this.state = {
