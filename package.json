@@ -7,10 +7,10 @@
   "scripts": {
     "report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
     "jserver": "json-server --watch todox.json --port 5555",
+    "serve:dev": "webpack-dev-server -d --config webpack.dev.config.js",
+    "serve:prod": "webpack-dev-server -d --config webpack.prod.config.js",
     "build:dev": "webpack -d --config webpack.dev.config.js",
     "build:prod": "webpack -p --config webpack.prod.config.js",
-    "serve:dev": "webpack-dev-server -d --config webpack.dev.config.js",
-    "serve:prod": "webpack-dev-server -p --config webpack.prod.config.js",
     "start:dev": "concurrently \"npm:jserver\" \"npm:serve:dev\"",
     "start:prod": "concurrently  \"npm:serve:prod\""
   },

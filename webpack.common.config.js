@@ -108,8 +108,8 @@ module.exports = {
       favicon: "favicon.ico",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].bundle..css",
-      chunkFilename: "[id].bundle.css",
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: "disabled",

@@ -1,10 +1,12 @@
 import "./modules/libs";
+import logo from "./assets/svg/todox_logo.svg";
 import { addAnimate } from "./modules/animate";
 import { Request } from "./modules/request.firebase";
 import { UI } from "./modules/ui";
 
 const inputTask = document.getElementById("input-task");
 const addButton = document.querySelector(".btnAdd");
+const logoContainer = document.getElementById("logo");
 
 const request = new Request();
 const ui = new UI();
@@ -12,6 +14,7 @@ const ui = new UI();
 eventListener();
 
 function eventListener() {
+  logoContainer.src = logo;
   document.addEventListener("DOMContentLoaded", getTask);
   addButton.addEventListener("click", addTask);
   inputTask.addEventListener("keyup", valueControl);
